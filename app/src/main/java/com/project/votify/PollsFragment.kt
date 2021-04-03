@@ -15,7 +15,7 @@ class PollsFragment() : Fragment(), RecyclerViewAdapter.onPollItemClickListener 
     private var pollsList= arrayOf("Class Representative","Spice Representative","President","General Secretory")//Retrived data from firebase(Dummy data for now)
     private var adapter = RecyclerViewAdapter(pollsList,this)// Pass Retrived data to Recycler view for display
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         val view:View = inflater.inflate(R.layout.polls_fragment, container, false)
         val RecyclerViewId=view.findViewById<RecyclerView>(R.id.RecyclerViewId)
         layoutManager= LinearLayoutManager(activity)
@@ -25,9 +25,9 @@ class PollsFragment() : Fragment(), RecyclerViewAdapter.onPollItemClickListener 
     }
 
     override fun onItemClick(position: Int) {
-        var bundle= Bundle()
+        val bundle= Bundle()
         bundle.putString("pollId","sdsdsdsdsd") //We have to pass poll id
-        var fragment=VotingFragment()
+        val fragment=VotingFragment()
         fragment.arguments=bundle
         val fragmentTransaction = fragmentManager?.beginTransaction()
         fragmentTransaction?.replace(R.id.fragment_container,fragment)

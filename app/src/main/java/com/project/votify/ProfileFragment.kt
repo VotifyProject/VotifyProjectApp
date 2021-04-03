@@ -11,9 +11,9 @@ import androidx.fragment.app.Fragment
 import com.google.firebase.auth.FirebaseAuth
 
 class ProfileFragment : Fragment() {
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         val view: View = inflater.inflate(R.layout.profile_fragment, container, false)
-        var editProfile = view.findViewById<Button>(R.id.editProfile)
+        val editProfile = view.findViewById<Button>(R.id.editProfile)
         editProfile.setOnClickListener(){
             val intent= Intent(activity,EditProfile::class.java)
             startActivity(intent)

@@ -22,7 +22,7 @@ class VotingFragment : Fragment() {
     private var adapter = CandidateRecyclerViewAdapter(candidateList)
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        var bundle = arguments
+        val bundle = arguments
         if (bundle != null) {
             val pollid: String? = bundle.getString("pollId")
             if (pollid != null) {
