@@ -6,26 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".StudentHomeActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="WELCOME STUDENT"
-        android:textAllCaps="true"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+ <FrameLayout
+     android:id="@+id/fragment_container"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:layout_above="@id/bottom_navigation"
+     />
 
-    <Button
-        android:id="@+id/student_sign_out"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:padding="10dp"
-        android:text="sign out"
-        android:textAllCaps="true"
-        android:textSize="25sp" />
+ <com.google.android.material.bottomnavigation.BottomNavigationView
+     android:id="@+id/bottom_navigation"
+     style="@style/Widget.MaterialComponents.BottomNavigationView"
+     android:layout_width="match_parent"
+     android:layout_alignParentBottom="true"
+     android:layout_height="wrap_content"
+     app:labelVisibilityMode="unlabeled"
+     app:menu="@menu/student_navigation_menu"
+     app:itemIconSize="30sp"/>
 
 </RelativeLayout>

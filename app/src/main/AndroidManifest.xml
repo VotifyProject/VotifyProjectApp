@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.project.votify">
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -18,12 +19,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".StudentHomeActivity" />
         <activity android:name=".TeacherHomeActivity" />
+        <activity android:name=".StudentHomeActivity"/>
         <activity android:name=".RegisterTeacherActivity" />
         <activity android:name=".RegisterStudentActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".SignInActivity"/>
+        <activity android:name=".EditProfile"/>
     </application>
-
 </manifest>

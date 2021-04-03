@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.appbar.AppBarLayout
+                    android:id="@+id/bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.appbar.MaterialToolbar
+                        android:id="@+id/topAppBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:background="#fff">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Profile"
+                            android:textColor="#345AD6"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+
+
+                    </com.google.android.material.appbar.MaterialToolbar>
+
+                </com.google.android.material.appbar.AppBarLayout>
+
+                <ScrollView
+                    android:id="@+id/scrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/bar"
+                    android:fillViewport="true">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:foregroundTint="#FFFFFF">
+
+                        <LinearLayout
+                            android:layout_marginTop="30dp"
+                            android:layout_marginHorizontal="20dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:id="@+id/profileContainer">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/profileImage"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/ic_profile_nav" />
+
+                            <TextView
+                                android:layout_marginTop="15dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Elon Musk"
+                                android:textStyle="bold"
+                                android:textColor="#345AD6"
+                                android:textSize="21sp"
+                                />
+
+                            <View
+                                android:layout_marginTop="30dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:background="#345AD6"
+                                />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10sp"
+                                android:labelFor="@+id/email"
+                                android:text="Email:"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:textColor="#345AD6"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10sp"
+                                android:text="elonmusk@gmail.com"
+                                android:textSize="16sp"
+                                android:textStyle="italic" />
+
+                            <View
+                                android:layout_marginTop="10sp"
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:background="#c6c6c6"
+                                />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10sp"
+                                android:labelFor="@+id/phoneno"
+                                android:text="Phone No:"
+                                android:textSize="17sp"
+                                android:textStyle="bold"
+                                android:textColor="#345AD6"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="9382938498"
+                                android:textSize="15sp"
+                                android:textStyle="italic" />
+
+                            <View
+                                android:layout_marginTop="10sp"
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:background="#c6c6c6"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10sp"
+                                android:labelFor="@+id/rollno"
+                                android:text="Roll No:"
+                                android:textSize="17sp"
+                                android:textStyle="bold"
+                                android:textColor="#345AD6"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10sp"
+                                android:text="MCA20"
+                                android:textSize="15sp"
+                                android:textStyle="italic" />
+                            <View
+                                android:layout_marginTop="10sp"
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:background="#c6c6c6"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10sp"
+                                android:labelFor="@+id/rollno"
+                                android:text="Course:"
+                                android:textSize="17sp"
+                                android:textStyle="bold"
+                                android:textColor="#345AD6" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10sp"
+                                android:text="MCA"
+                                android:textSize="15sp"
+                                android:textStyle="italic" />
+                            <View
+                                android:layout_marginTop="10sp"
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:background="#c6c6c6"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10sp"
+                                android:labelFor="@+id/rollno"
+                                android:text="Division:"
+                                android:textSize="17sp"
+                                android:textStyle="bold"
+                                android:textColor="#345AD6" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10sp"
+                                android:text="B"
+                                android:textSize="15sp"
+                                android:textStyle="italic" />
+
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/editProfile"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"
+                                android:layout_gravity="center_horizontal"
+                                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                                android:layout_marginTop="10sp"
+                                android:text="Edit Profile"
+                                android:textColor="#345AD6"/>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/student_sign_out"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"
+                                android:layout_gravity="center_horizontal"
+                                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                                android:layout_marginTop="10sp"
+                                android:text="signOut"
+                                android:textColor="#345AD6"/>
+
+                        </LinearLayout>
+                    </RelativeLayout>
+                </ScrollView>
+            </RelativeLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</RelativeLayout>
