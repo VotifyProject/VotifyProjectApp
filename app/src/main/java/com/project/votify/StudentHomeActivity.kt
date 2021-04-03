@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
+import androidx.fragment.app.Fragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -12,17 +14,33 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 
 class StudentHomeActivity : AppCompatActivity() {
+    private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
+        when(item.itemId) {
+            R.id.home -> {
+                replaceFragment(HomeFragment())
+                return@OnNavigationItemSelectedListener true
+            }
+            R.id.polls -> {
+                replaceFragment(PollsFragment())
+                return@OnNavigationItemSelectedListener true
+            }
+            R.id.profile -> {
+                replaceFragment(ProfileFragment())
+                return@OnNavigationItemSelectedListener true
+            }
+            else -> false
+        }
+    }
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_student_home)
 
-        val sign_out = findViewById<Button>(R.id.student_sign_out)
-        sign_out.setOnClickListener {
-            FirebaseAuth.getInstance().signOut()
-            Toast.makeText(applicationContext, "Logged Out!", Toast.LENGTH_LONG).show()
-            startActivity(Intent(applicationContext, SignInActivity::class.java))
-            finish()
-        }
+        val bottom_navigation:BottomNavigationView=findViewById(R.id.bottom_navigation)
+        bottom_navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
+        replaceFragment(HomeFragment())
+
     }
 
     override fun onStart() {
@@ -31,5 +49,10 @@ class StudentHomeActivity : AppCompatActivity() {
             startActivity(Intent(this, SignInActivity::class.java))
             finish()
         }
+    }
+
+    private fun replaceFragment(fragment: Fragment){
+        val fragmentTransaction = supportFragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.fragment_container, fragment).commit()
     }
 }

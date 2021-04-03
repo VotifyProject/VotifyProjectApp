@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <com.google.android.material.card.MaterialCardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18sp"
+        android:layout_marginVertical="5sp"
+        android:focusable="true"
+        app:cardCornerRadius="10sp"
+        android:clickable="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/pollName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:gravity="center_horizontal"
+                android:textSize="22sp"
+                android:textStyle="italic" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
