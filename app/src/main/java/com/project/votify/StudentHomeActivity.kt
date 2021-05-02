@@ -14,6 +14,7 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 
 class StudentHomeActivity : AppCompatActivity() {
+    lateinit var bottom_navigation: BottomNavigationView
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when(item.itemId) {
             R.id.home -> {
@@ -34,13 +35,22 @@ class StudentHomeActivity : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_student_home)
-
-        val bottom_navigation:BottomNavigationView=findViewById(R.id.bottom_navigation)
+        super.onCreate(savedInstanceState)
+        bottom_navigation=findViewById(R.id.bottom_navigation)
         bottom_navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
         replaceFragment(HomeFragment())
+    }
 
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.clear()
+        outState.putInt("tabSelected", bottom_navigation.selectedItemId)
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        bottom_navigation.selectedItemId = savedInstanceState.getInt("tabSelected")
     }
 
     override fun onStart() {

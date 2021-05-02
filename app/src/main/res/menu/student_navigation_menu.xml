@@ -3,17 +3,17 @@
     <item
         android:id="@+id/home"
         android:enabled="true"
-        android:icon="@drawable/ic_home_nav"
+        android:icon="@drawable/home_selector"
         android:title="Home"
         />
     <item
         android:id="@+id/polls"
         android:enabled="true"
-        android:icon="@drawable/ic_poll_nav"
+        android:icon="@drawable/polls_selector"
         android:title="Polls"/>
     <item
         android:id="@+id/profile"
         android:enabled="true"
-        android:icon="@drawable/ic_profile_nav"
+        android:icon="@drawable/profile_selector"
         android:title="Profile"/>
 </menu>
