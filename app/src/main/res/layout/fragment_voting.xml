@@ -11,6 +11,7 @@
 
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/bar"
+            app:elevation="0sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -23,11 +24,13 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:text="Candidates"
-                    android:textColor="#345AD6"
+                    android:text="CANDIDATES"
+                    android:layout_marginLeft="30sp"
+                    android:textStyle="bold"
+                    android:textColor="#345AD7"
                     android:textSize="22sp"
-                    android:textStyle="bold" />
+                    />
+
             </com.google.android.material.appbar.MaterialToolbar>
         </com.google.android.material.appbar.AppBarLayout>
 
